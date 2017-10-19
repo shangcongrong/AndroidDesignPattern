@@ -3,6 +3,7 @@
     package="com.yangxin.androiddesignpattern">
 
     <application
+        android:name="com.yangxin.app.YxApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -16,6 +17,18 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.yangxin.service.MyServiceActivity"
+            android:label="@string/title_activity_my_service"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <service
+            android:name="com.yangxin.service.MyStartService">
+        </service>
+        <service
+            android:name="com.yangxin.service.MyBindService">
+        </service>
     </application>
 
 </manifest>
