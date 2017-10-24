@@ -1,4 +1,4 @@
-package com.yangxin.annotation;
+package com.yangxin.javabasic.annotation;
 
 import android.app.Activity;
 import android.util.Log;

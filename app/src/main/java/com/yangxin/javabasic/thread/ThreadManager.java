@@ -1,4 +1,4 @@
-package com.yangxin.thread;
+package com.yangxin.javabasic.thread;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;

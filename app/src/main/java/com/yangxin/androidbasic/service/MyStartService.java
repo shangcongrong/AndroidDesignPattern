@@ -1,4 +1,4 @@
-package com.yangxin.service;
+package com.yangxin.androidbasic.service;
 
 import android.app.Service;
 import android.content.Intent;

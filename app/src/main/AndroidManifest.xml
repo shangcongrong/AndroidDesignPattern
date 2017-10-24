@@ -18,17 +18,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.yangxin.service.MyServiceActivity"
+            android:name="com.yangxin.androidbasic.service.MyServiceActivity"
             android:label="@string/title_activity_my_service"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
-        <service android:name="com.yangxin.service.MyStartService">
+        <service android:name="com.yangxin.androidbasic.service.MyStartService">
         </service>
-        <service android:name="com.yangxin.service.MyBindService">
+        <service android:name="com.yangxin.androidbasic.service.MyBindService">
         </service>
 
-        <activity android:name="com.yangxin.msg.MsgHandlerActivity">
+        <activity android:name="com.yangxin.androidbasic.msg.MsgHandlerActivity">
         </activity>
     </application>
 

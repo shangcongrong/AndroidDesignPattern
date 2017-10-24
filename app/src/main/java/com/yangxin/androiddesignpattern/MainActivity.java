@@ -6,10 +6,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-import com.yangxin.annotation.MyAnnotation;
+import com.yangxin.javabasic.annotation.MyAnnotation;
 import com.yangxin.app.BaseActivity;
-import com.yangxin.service.MyServiceActivity;
-import com.yangxin.thread.ThreadManager;
+import com.yangxin.androidbasic.service.MyServiceActivity;
+import com.yangxin.javabasic.thread.ThreadManager;
 
 /**
  * @author xinyang

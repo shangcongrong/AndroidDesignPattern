@@ -5,7 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.orhanobut.logger.Logger;
-import com.yangxin.annotation.AnnotationUtils;
+import com.yangxin.javabasic.annotation.AnnotationUtils;
 
 /**
  * @author xinyang

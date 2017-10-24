@@ -1,4 +1,4 @@
-package com.yangxin.msg;
+package com.yangxin.androidbasic.msg;
 
 import android.os.Bundle;
 import android.os.Handler;

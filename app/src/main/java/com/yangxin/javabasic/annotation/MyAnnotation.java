@@ -1,4 +1,4 @@
-package com.yangxin.annotation;
+package com.yangxin.javabasic.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

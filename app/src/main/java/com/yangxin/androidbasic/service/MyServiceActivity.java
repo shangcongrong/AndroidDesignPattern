@@ -1,4 +1,4 @@
-package com.yangxin.service;
+package com.yangxin.androidbasic.service;
 
 import android.content.ComponentName;
 import android.content.Intent;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.yangxin.androiddesignpattern.R;
-import com.yangxin.annotation.MyAnnotation;
+import com.yangxin.javabasic.annotation.MyAnnotation;
 import com.yangxin.app.BaseActivity;
 
 /**
