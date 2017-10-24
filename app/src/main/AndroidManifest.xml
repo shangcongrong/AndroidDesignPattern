@@ -23,12 +23,13 @@
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
-        <service
-            android:name="com.yangxin.service.MyStartService">
+        <service android:name="com.yangxin.service.MyStartService">
         </service>
-        <service
-            android:name="com.yangxin.service.MyBindService">
+        <service android:name="com.yangxin.service.MyBindService">
         </service>
+
+        <activity android:name="com.yangxin.msg.MsgHandlerActivity">
+        </activity>
     </application>
 
 </manifest>

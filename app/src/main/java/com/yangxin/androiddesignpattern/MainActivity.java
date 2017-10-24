@@ -3,20 +3,25 @@ package com.yangxin.androiddesignpattern;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.TextView;
 
 import com.yangxin.annotation.MyAnnotation;
 import com.yangxin.app.BaseActivity;
 import com.yangxin.service.MyServiceActivity;
+import com.yangxin.thread.ThreadManager;
 
 /**
  * @author xinyang
  */
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements OnClickListener {
 
     @MyAnnotation(R.id.start_service)
     private TextView mStartService;
+
+    @MyAnnotation(R.id.start_thread)
+    private TextView mStartThread;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +31,21 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-        mStartService.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        mStartService.setOnClickListener(this);
+        mStartThread.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.start_service:
                 startActivity(new Intent(MainActivity.this, MyServiceActivity.class));
-            }
-        });
+                break;
+            case R.id.start_thread:
+                ThreadManager.startTestThread();
+                break;
+            default:
+                break;
+        }
     }
 }
