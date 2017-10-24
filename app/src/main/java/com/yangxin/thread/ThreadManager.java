@@ -4,7 +4,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 /**
- * xxx
+ * 多种线程方式实现的管理类
  *
  * @author xinyang
  * @time 2017/10/24.
