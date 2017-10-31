@@ -6,10 +6,12 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-import com.yangxin.javabasic.annotation.MyAnnotation;
-import com.yangxin.app.BaseActivity;
 import com.yangxin.androidbasic.service.MyServiceActivity;
+import com.yangxin.app.BaseActivity;
+import com.yangxin.javabasic.annotation.MyAnnotation;
 import com.yangxin.javabasic.thread.ThreadManager;
+
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author xinyang
@@ -33,6 +35,13 @@ public class MainActivity extends BaseActivity implements OnClickListener {
     protected void initView() {
         mStartService.setOnClickListener(this);
         mStartThread.setOnClickListener(this);
+        ReentrantLock reentrantLock = new ReentrantLock();
+        reentrantLock.lock();
+        try{
+
+        }finally {
+            reentrantLock.unlock();
+        }
     }
 
     @Override
