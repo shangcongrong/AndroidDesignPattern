@@ -1,4 +1,4 @@
-package com.yangxin.designpattern.factory.abstractfactory;
+package com.yangxin.designpattern.factory.methodfactory;
 
 import com.yangxin.designpattern.factory.AbstractProduct;
 import com.yangxin.designpattern.factory.ProductB;
@@ -7,9 +7,10 @@ import com.yangxin.designpattern.factory.ProductB;
  * Created by liangyu on 17/11/4.
  */
 
-public class FactoryB extends AbstractFactory {
+public class FactoryB implements MethodFactory {
+
     @Override
-    protected AbstractProduct productionProduct() {
+    public AbstractProduct createProduct() {
         return new ProductB();
     }
 }
