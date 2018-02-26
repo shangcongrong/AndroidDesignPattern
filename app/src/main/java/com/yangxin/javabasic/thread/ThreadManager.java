@@ -1,5 +1,9 @@
 package com.yangxin.javabasic.thread;
 
+import com.yangxin.javabasic.thread.threadexample.MyThreadOne;
+import com.yangxin.javabasic.thread.threadexample.MyThreadTwo;
+import com.yangxin.javabasic.thread.threadexample.ThreadMsg;
+
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
@@ -16,6 +20,16 @@ public class ThreadManager {
         startCallableThread();
         startSingleThread();
         startRunnableThread();
+        //线程1,2执行完成后在执行线程3
+        startMyThreadThree();
+    }
+
+    private static void startMyThreadThree() {
+        ThreadMsg threadMsg = new ThreadMsg();
+        MyThreadOne myThreadOne = new MyThreadOne(threadMsg);
+        MyThreadTwo myThreadTwo = new MyThreadTwo(threadMsg);
+        myThreadOne.start();
+        myThreadTwo.start();
     }
 
     private static void startRunnableThread() {
