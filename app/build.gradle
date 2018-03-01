@@ -1,15 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "26.0.1"
+    compileSdkVersion 27
+    buildToolsVersion "27.0.2"
     defaultConfig {
         applicationId "com.yangxin.androiddesignpattern"
         minSdkVersion 16
-        targetSdkVersion 25
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        flavorDimensions "versionCode"
     }
     signingConfigs {
         release {
@@ -33,6 +34,11 @@ android {
         }
         Default_Channel {}
     }
+    //java编译版本改为1.8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -42,11 +48,11 @@ dependencies {
     })
     compile(name: 'weex-sdk-0.15.0-r2', ext: 'aar')
     //use for print log
-    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile "com.android.support:appcompat-v7:$SUPPORT_LIBRARY_VERSION"
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.taobao.android:weex_inspector:0.12.1'
     compile 'com.squareup.okhttp3:okhttp:3.6.0'
-    compile 'com.android.support:design:25.3.1'
+    compile "com.android.support:design:$SUPPORT_LIBRARY_VERSION"
     compile 'com.orhanobut:logger:2.1.1'
     testCompile 'junit:junit:4.12'
 //    debugCompile 'com.squareup.okhttp3:okhttp-ws:3.4.1'
