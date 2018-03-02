@@ -9,9 +9,11 @@ import android.widget.TextView;
 import com.orhanobut.logger.Logger;
 import com.yangxin.androidbasic.service.MyServiceActivity;
 import com.yangxin.app.BaseActivity;
+import com.yangxin.designpattern.productcustomer.Customer;
+import com.yangxin.designpattern.productcustomer.Producer;
+import com.yangxin.designpattern.productcustomer.Product;
 import com.yangxin.javabasic.annotation.MyAnnotation;
 import com.yangxin.javabasic.thread.ThreadManager;
-import com.yangxin.ui.dragrecycerview.DragRecyclerViewActivity;
 
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -68,7 +70,12 @@ public class MainActivity extends BaseActivity implements OnClickListener {
                 ThreadManager.startTestThread();
                 break;
             case R.id.jump_to_other_page:
-                startActivity(new Intent(MainActivity.this, DragRecyclerViewActivity.class));
+                //startActivity(new Intent(MainActivity.this, DragRecyclerViewActivity.class));
+                Product product = new Product();
+                Producer producer = new Producer(product);
+                Customer customer = new Customer(product);
+                producer.start();
+                customer.start();
                 break;
             default:
                 break;
