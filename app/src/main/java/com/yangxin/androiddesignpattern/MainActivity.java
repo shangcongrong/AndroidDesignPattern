@@ -36,6 +36,8 @@ public class MainActivity extends BaseActivity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        String test = "asdsadasdsad.sdf";
+        Logger.d("test:"+test.matches("^.*(\\.|,|\\uff0c|\\u3002)$"));
     }
 
     @Override
