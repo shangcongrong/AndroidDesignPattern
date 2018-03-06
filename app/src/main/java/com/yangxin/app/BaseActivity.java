@@ -28,18 +28,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         initView();
     }
 
-    @Override
-    public void onContentChanged() {
-        super.onContentChanged();
-        Logger.d("onContentChanged");
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Logger.d("onResume");
-    }
-
     /**
      * 初始化Activity中的iew
      */
