@@ -38,6 +38,12 @@ public class MainActivity extends BaseActivity implements OnClickListener {
         setContentView(R.layout.activity_main);
         String test = "asdsadasdsad.sdf";
         Logger.d("test:"+test.matches("^.*(\\.|,|\\uff0c|\\u3002)$"));
+        String test1 = "asdsadasdsad,sdf";
+        Logger.d("test1:"+test1.matches("^.*(\\.|,|\\uff0c|\\u3002)$"));
+        String test2 = "asdsadasdsad，sdf";
+        Logger.d("test2:"+test2.matches("^.*(,|\\.|\\uff0c|\\u3002)$"));
+        String test3 = "asdsadasdsad。sdf";
+        Logger.d("test3:"+test3.matches("^.*(,|\\.|\\uff0c|\\u3002)$"));
     }
 
     @Override
